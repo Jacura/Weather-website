@@ -4,19 +4,24 @@
 
 <head>
     <title>Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
+     
 </head>
 
 <body>
     <div class="main-content">
+        <br>
+        <br>
         {{>header}}
 
-        <p>Use this site to get your weather!</p>
+        <p style="font-size: 20px;"><b>Use this site to get your weather!</b></p>
 
         <form>
-            <input placeholder="Location">
-            <button>Search</button>
+            <input placeholder="Location" style="font-size: 20px; border-radius:5px">
+             
+            <button type="button" class="btn btn-primary btn-lg" style="font-size: 15px;">Search</button>
         </form>
     </div>
 

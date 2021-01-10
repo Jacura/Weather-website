@@ -36,22 +36,22 @@ app.use(express.static(publicDirectoryPath));
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'weather App',
-        name: 'ankit babes'
+        title: 'Weather App',
+        name: 'Ankit Rawal'
     });
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About Express',
-        name: 'ankit babes'
+        title: 'About ',
+        name: 'Ankit Rawal'
     });
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help page',
-        name: "ankit rawal"
+        name: "Ankit Rawal"
     });
 })
 
@@ -151,5 +151,5 @@ app.get('*', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log('Server is up on port 3000' + port);
+    console.log('Server is up on port' + port);
 })
