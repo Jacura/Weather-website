@@ -1,7 +1,5 @@
  
 
-
-
 //use of FETCH API
 
 //fetch('http://puzzle.mead.io/puzzle').then((response)=>{
@@ -9,7 +7,7 @@
   //     console.log(data);
    //})
 //})
-//goal: Fetch weather!
+ 
 
 //1.setup a call to fetch wether from rohtak
 //2.get the parse json response 
@@ -21,8 +19,8 @@ const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
-weatherForm.addEventListener('submit', (e) => {
-    e.preventDefault()
+weatherForm.addEventListener('submit', (event) => {
+    event.preventDefault()
 
     const location = search.value
 
@@ -31,6 +29,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
+           // console.log(data.location);
             if (data.error) {
                 messageOne.textContent = data.error
             } else {
@@ -40,3 +39,5 @@ weatherForm.addEventListener('submit', (e) => {
         })
     })
 })
+
+ 
